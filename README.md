@@ -38,12 +38,26 @@
 
 ## 설치
 
+### 방법 1 — Claude Code 에게 맡기기 (가장 빠름) ⚡
+
+설치하고 싶은 macOS 의 **Claude Code 세션에** 아래 한 줄을 그대로 붙여넣고 요청하세요.
+저장소를 클론하고 `install.sh` 까지 알아서 실행해 줍니다.
+
+```
+https://github.com/syriahamster/claude-code-mac-notify 이 저장소를 클론해서 README 대로 install.sh 로 알림을 설치해줘
+```
+
+> 적용은 **새 Claude Code 세션부터** 동작합니다 (hook 은 세션 시작 시 한 번 읽힙니다).
+
+### 방법 2 — 직접 설치
+
 ```bash
-cd /path/to/claude-notify   # 이 저장소를 받아둔 위치
+git clone https://github.com/syriahamster/claude-code-mac-notify.git
+cd claude-code-mac-notify
 ./install.sh
 ```
 
-`~/.claude/settings.json` 의 `hooks` 에 `Stop`/`Notification` 항목을 추가하고,
+두 방법 모두 `~/.claude/settings.json` 의 `hooks` 에 `Stop`/`Notification` 항목을 추가하고,
 기존 설정은 `settings.json.bak` 으로 백업합니다. **새 Claude Code 세션부터** 적용됩니다.
 
 ### 바로 테스트

@@ -47,7 +47,8 @@
 https://github.com/syriahamster/claude-code-mac-notify 이 저장소를 클론해서 README 대로 install.sh 로 알림을 설치해줘
 ```
 
-> 적용은 **새 Claude Code 세션부터** 동작합니다 (hook 은 세션 시작 시 한 번 읽힙니다).
+> 설치 후 **즉시 적용**됩니다. Claude Code 가 `settings.json` 을 파일 워처로 실시간
+> 감지하므로, 실행 중인 세션이라도 다음 이벤트(완료/입력 대기)부터 바로 알림이 울립니다.
 
 ### 방법 2 — 직접 설치
 
@@ -58,7 +59,8 @@ cd claude-code-mac-notify
 ```
 
 두 방법 모두 `~/.claude/settings.json` 의 `hooks` 에 `Stop`/`Notification` 항목을 추가하고,
-기존 설정은 `settings.json.bak` 으로 백업합니다. **새 Claude Code 세션부터** 적용됩니다.
+기존 설정은 `settings.json.bak` 으로 백업합니다. **설치 즉시 적용**되며, 실행 중인
+세션이라도 (파일 워처가 변경을 감지해) 다음 이벤트부터 바로 알림이 동작합니다.
 
 ### 바로 테스트
 
